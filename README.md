@@ -1,6 +1,7 @@
 # cyberlogs: the ultimate cli journal app 
 
-with just a few keystrokes, you can create a journal entry, add your thoughts, and save them in the "journal/" directory, like whispers of your soul echoing in the void of cyberspace. The lightweight nature of this app makes it the perfect tool for tracking your ideas, progress, and memories as you wander through the dystopian landscape of your projects.
+![cieguito](https://pbs.twimg.com/profile_banners/3438631625/1681945275/1500x500)
+With just a few keystrokes, you can create a journal entry, add your thoughts, and save them in the "journal/" directory, like whispers of your soul echoing in the void of cyberspace. The lightweight nature of this app makes it the perfect tool for tracking your ideas, progress, and memories as you wander through the dystopian landscape of your projects.
 
 ## 🚀 Features
 - Automatically generates a date-based text file, like a beacon of light in the darkness.
@@ -68,3 +69,6 @@ chmod +x run.sh
 ## 🤝 Contributing
 
 If you have questions, suggestions, or ideas for improvement, open an issue or join our discussion. Make cyberlogs the pinnacle of edgy and arrogant cli journaling
+
+hit me up on twitter: [@casiojapi](https://twitter.com/casiojapi)
+
