@@ -1,0 +1,19 @@
+# mvp$$$$$$$
+create a file with the current date, time and hour as its name.
+first line of the file displaying datetime. 
+
+# script (one call use)
+script to open and run directly the file. 
+
+# alias setup tutorial
+facilitate an alias setup, so you can log anytime anywhere effortlessly
+
+# compile journal
+add the funtionality to compile a journal, by days, months, and years.
+
+# custom time ranges to compile
+
+# config file
+add a config file to set up the environment. 
+	- template for titles on each journal log.
+
