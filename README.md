@@ -1,6 +1,7 @@
 # cyberlogs: cli journaling app 
 
 ![cieguito](https://pbs.twimg.com/profile_banners/3438631625/1681945275/1500x500)
+
 <br>
 With just a few keystrokes, you can create a journal entry, add your thoughts, and save them in the "journal/" directory, like whispers of your soul echoing in the void of cyberspace. The lightweight nature of this app makes it the perfect tool for tracking your ideas, progress, and memories as you wander through the dystopian landscape of your projects.
 
