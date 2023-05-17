@@ -1,4 +1,4 @@
 #!/bin/bash
 
-output=$(./target/debug/cyberlogs)
+output=$(./target/release/cyberlogs)
 nvim "$output"
