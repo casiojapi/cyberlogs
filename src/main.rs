@@ -4,6 +4,11 @@ use chrono;
 use std::fs;
 
 fn main() {
+
+    // if argc > 1 
+    // la idea seria armar un archivo de texto de cada mes
+    // usar una db - indexar años, mess 
+    //      ek
     let local_time = chrono::offset::Local::now();
     let time_str = local_time.format("%Y-%m-%d-%H%M").to_string();
     fs::create_dir_all("journal")
@@ -15,5 +20,5 @@ fn main() {
         expect("error while creating file");
     file.write_all(file_print.as_bytes()).expect("Unable to write data");
     println!("{}", file_name);
-
+    
 }
