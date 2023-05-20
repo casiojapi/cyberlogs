@@ -18,22 +18,22 @@ fn main() {
     fs::create_dir_all("journal")
         .expect("error creating directory");
     let file_name = &time_str[0..10];
-    let hour_min = &time_str[11..14];
+    let hour_min = &time_str[11..15];
     println!("file_name: {}, hour_min: {}", file_name, hour_min);
 
     let directory = format!("journal/{}.txt", file_name);
     let file_print = format!("today: {}\n\n\n", time_str);
     
-    let path = Path::new(file_name);
+    let path = Path::new(&directory);
     
     if path.exists() {
         let file = OpenOptions::new()
             .write(true)
             .append(true)
-            .open(directory);
-        writeln!(file.expect("XD"), "\n\n{}\n\n\n", hour_min);
+            .open(&directory);
+        writeln!(file.expect("XD"), "\n\nnew log entry at: {}\n\n\n", hour_min);
     } else {
-        let file = File::create(&directory).
+        let mut file = File::create(&directory).
             expect("error while creating file");
         file.write_all(file_print.as_bytes()).expect("Unable to write data");
     }
