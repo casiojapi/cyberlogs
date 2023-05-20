@@ -6,7 +6,6 @@ use std::fs;
 fn main() {
     let local_time = chrono::offset::Local::now();
     let time_str = local_time.format("%Y-%m-%d-%H%M").to_string();
-    //println!("{}", time_str);
     fs::create_dir_all("journal")
         .expect("error creating directory");
 
