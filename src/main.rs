@@ -19,7 +19,7 @@ fn main() {
         .expect("error creating directory");
     let file_name = &time_str[0..10];
     let hour_min = &time_str[11..15];
-    println!("file_name: {}, hour_min: {}", file_name, hour_min);
+//    println!("file_name: {}, hour_min: {}", file_name, hour_min);
 
     let directory = format!("journal/{}.txt", file_name);
     let file_print = format!("today: {}\n\n\n", time_str);
