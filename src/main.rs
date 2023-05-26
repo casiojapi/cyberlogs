@@ -8,6 +8,7 @@ use dirs;
 
 fn main() {
 
+    const JOURNAL_PATH: &'static str = ".journal";
     // if argc > 1 
     // la idea seria armar un archivo de texto de cada mes
     // usar una db - indexar años, mess 
@@ -16,8 +17,7 @@ fn main() {
     let local_time = chrono::offset::Local::now();
     let time_str = local_time.format("%Y-%m-%d-%H%M").to_string();
     let home_dir = dirs::home_dir().expect("could not get home dir");
-    let journal_dir = home_dir.join(".journal");
-
+    let journal_dir = home_dir.join(JOURNAL_PATH);
 
 //    let journal_dir = "./journal";
     if let Err(_err) = std::fs::create_dir_all(&journal_dir) {
