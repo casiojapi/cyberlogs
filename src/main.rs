@@ -10,7 +10,9 @@ use dirs;
 // formatting for journal files: YYYY-MM-DD-HHMM
 fn main() {
     const JOURNAL_PATH: &'static str = ".journal";
+
     let local_time = chrono::offset::Local::now();
+
     let time_str = local_time.format("%Y-%m-%d-%H%M").to_string();
     let home_dir = dirs::home_dir().expect("could not get home dir");
     let journal_dir = home_dir.join(JOURNAL_PATH);
@@ -20,26 +22,26 @@ fn main() {
     let file_name = &time_str[0..10];
     let hour_min = &time_str[11..15];
 
-    let directory = format!("{}/{}.txt", journal_dir.display(), file_name);
+    let log_file_path = format!("{}/{}.txt", journal_dir.display(), file_name);
     let file_print = format!("today: {}\n----------------------\n\n\n", time_str);
     
-    let path = Path::new(&directory);
+    let path = Path::new(&log_file_path);
     
     if path.exists() {
         let file = OpenOptions::new()
             .write(true)
             .append(true)
-            .open(&directory);
+            .open(&log_file_path);
         let file_append = format!("\n\nnew log entry at: {}\n----------------------\n\n\n", hour_min);
         file
             .expect("Error with file")
             .write_all(file_append.as_bytes())
             .expect("Unable to append data");
     } else {
-        let mut file = File::create(&directory)
+        let mut file = File::create(&log_file_path)
             .expect("error while creating file");
         file.write_all(file_print.as_bytes()).expect("Unable to write data");
     }
-    println!("{}", directory);
+    println!("{}", log_file_path);
     
 }
