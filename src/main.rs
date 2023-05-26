@@ -4,7 +4,7 @@ use std::fs::File;
 use std::path::Path;
 //use std::env;
 use std::fs::OpenOptions;
-
+use dirs;
 
 fn main() {
 
@@ -15,8 +15,8 @@ fn main() {
     // YYYY-MM-DD-HHMM
     let local_time = chrono::offset::Local::now();
     let time_str = local_time.format("%Y-%m-%d-%H%M").to_string();
-
-    let journal_dir = Path::new("~/.journal");
+    let home_dir = dirs::home_dir().expect("could not get home dir");
+    let journal_dir = home_dir.join(".journal");
 
 
 //    let journal_dir = "./journal";
