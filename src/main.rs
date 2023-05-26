@@ -1,6 +1,6 @@
-use std::fs::File;
 use std::io::prelude::*;
 use chrono;
+use std::fs::File;
 use std::path::Path;
 //use std::env;
 use std::fs::OpenOptions;
@@ -15,11 +15,11 @@ fn main() {
     // YYYY-MM-DD-HHMM
     let local_time = chrono::offset::Local::now();
     let time_str = local_time.format("%Y-%m-%d-%H%M").to_string();
-  //  fs::create_dir_all("journal")
-   //     .expect("error creating directory");
-//    let root_dir = env::current_dir().expect("failed to retrieve current directory");
-//    let journal_dir = root_dir.join("journal");
-    let journal_dir = "./journal";
+
+    let journal_dir = Path::new("~/.journal");
+
+
+//    let journal_dir = "./journal";
     if let Err(_err) = std::fs::create_dir_all(&journal_dir) {
         //eprintln!("Failed to create directory: {}", err);
     } else {
@@ -29,7 +29,7 @@ fn main() {
     let hour_min = &time_str[11..15];
 //    println!("file_name: {}, hour_min: {}", file_name, hour_min);
 
-    let directory = format!("{}/{}.txt", journal_dir, file_name);
+    let directory = format!("{}/{}.txt", journal_dir.display(), file_name);
     let file_print = format!("today: {}\n----------------------\n\n\n", time_str);
     
     let path = Path::new(&directory);
