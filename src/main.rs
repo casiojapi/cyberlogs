@@ -22,7 +22,7 @@ fn main() {
     let file_name = &time_str[0..10];
     let hour_min = &time_str[11..15];
 
-    let log_file_path = format!("{}/{}.txt", journal_dir.display(), file_name);
+    let log_file_path = format!("{}/{}.md", journal_dir.display(), file_name);
     let file_print = format!("today: {}\n----------------------\n\n\n", time_str);
     
     let path = Path::new(&log_file_path);
