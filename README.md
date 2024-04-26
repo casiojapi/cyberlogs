@@ -69,7 +69,7 @@ chmod +x run.sh
 ## Use it anywhere
 
 ```bash
-alias cyberlogs='/Users/casiojapi/Documents/repos/cyberlogs/run.sh'
+alias cyberlogs='/path/to/cyberlogs/run.sh'
 ```
 ## Contributing
 
